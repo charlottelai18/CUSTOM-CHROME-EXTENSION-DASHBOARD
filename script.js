@@ -234,6 +234,8 @@ function updateTimerDisplay() {
 
 function startTimer() {
   clearInterval(timer);
+  timeLeft--; // subtract one second immediately
+  updateTimerDisplay(); // update right away
   timer = setInterval(() => {
     timeLeft--;
     updateTimerDisplay();
