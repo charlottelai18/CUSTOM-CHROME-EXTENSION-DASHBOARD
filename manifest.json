@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "HOME",
+    "name": "LumiTab",
     "version": "1.0",
     "description": "A personalized new tab dashboard with time, focus, and daily quotes.",
     "chrome_url_overrides": {
