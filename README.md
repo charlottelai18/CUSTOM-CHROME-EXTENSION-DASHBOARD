@@ -1,4 +1,4 @@
-# CUSTOM-CHROME-EXTENSION-DASHBOARD
+# LumiTab
 
 # 🧁 Custom Chrome Dashboard Extension
 
