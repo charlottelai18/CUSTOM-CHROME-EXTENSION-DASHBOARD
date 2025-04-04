@@ -40,5 +40,13 @@ A personalized Chrome new tab extension designed to enhance productivity and foc
 
 ---
 
-## 📁 File Structure
+## 🧠 Inspiration
 
+Inspired by Momentum and Pomofocus — built for fun and focus ✨
+
+---
+
+## 👩‍💻 Created by
+
+**Charlotte Lai**  
+[@yourgithub](https://github.com/charlottelai18) ← replace with your handle  
