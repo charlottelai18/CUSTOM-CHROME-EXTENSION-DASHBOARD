@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "HOME",
+    "version": "1.0",
+    "description": "A personalized new tab dashboard with time, focus, and daily quotes.",
+    "chrome_url_overrides": {
+      "newtab": "newtab.html"
+    },
+    "permissions": [],
+    "host_permissions": ["https://api.quotable.io/"],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["images/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  

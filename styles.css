@@ -1,0 +1,388 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    color: white;
+    background-image: url('images/background1.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+.name-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+  
+  
+.name-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.6s ease-out;
+}
+  
+  
+.name-box p {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Segoe UI", sans-serif;
+}
+  
+.name-box input {
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: "Segoe UI", sans-serif;
+    transition: border 0.2s;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+}
+  
+.name-box input:focus {
+    border: 1px solid #999;
+}
+  
+  
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.4); /* darkens background for text readability */
+}
+
+.time-display{
+    font-size: 200px;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.greeting-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.menu-toggle {
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+}
+  
+.menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+  
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 36px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+  
+.menu-item {
+    padding: 10px 16px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+  
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+  
+
+.greeting {
+    padding-top: 20px;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+  
+.quote {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: medium;
+    text-align: center;
+    width: 50%;
+    padding-top: 30px;
+}
+
+.spotify-player {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0px 0px 50px 50px;
+}
+
+.moodSection{
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+
+.moodSection p{
+    font-weight: bold;
+    font-size: medium;
+}
+
+#spotifyFrame {
+    margin-top: 10px;
+  }
+  
+#moodSelector {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background: rgb(35, 34, 34);
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+  
+
+.to-do-app {
+    background: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 20%;
+    padding-right: 40px;
+}
+
+.to-do-app h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #272423;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 18px;
+    padding: 10px 8px 10px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+ul li span {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    color: #ff5945;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url("images/unchecked.png"); /* adjust path if needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul li.checked::before {
+    background-image: url("images/checked.png");
+}
+
+.weather-widget {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 50px;
+    z-index: 100;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  
+.weather-widget img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.pomodoro-timer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    z-index: 999;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    width: 280px;
+  }
+  
+  .modes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    gap: 5px;
+  }
+  
+  .mode-btn {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 6px 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .mode-btn.active {
+    background: white;
+    color: black;
+  }
+  
+  .mode-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .time {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .controls button {
+    padding: 8px 20px;
+    border: none;
+    background: white;
+    color: black;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .controls button:hover {
+    background: #cdcbcb;
+  }
+  
+  
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
