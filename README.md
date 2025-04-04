@@ -4,7 +4,7 @@
 
 A personalized Chrome new tab extension designed to enhance productivity and focus — built with HTML, CSS, and JavaScript.
 
-![Screenshot](images/screenshot.png) <!-- Replace with your actual screenshot path -->
+![Screenshot](images/screenshot.png)
 
 ---
 
@@ -16,8 +16,8 @@ A personalized Chrome new tab extension designed to enhance productivity and foc
 - 🧘‍♀️ **Motivational Quote of the Day** — Fetched from the Quotable API
 - 🎵 **Mood-based Spotify Player** — Choose a playlist depending on your mood
 - 🌦️ **Weather Widget** — Real-time weather display with custom icons
-- 🍅 **Pomodoro Timer** — Study timer with short/long breaks and timer controls
-- 🎨 **Background Rotation** — Rotating scenic images every 2 minutes
+- 🍅 **Pomodoro Timer** — Pomodoro Study timer with short/long breaks and timer controls
+- 🎨 **Background Rotation** — Rotating scenic images every hour
 
 ---
 
