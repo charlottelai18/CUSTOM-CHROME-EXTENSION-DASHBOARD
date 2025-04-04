@@ -10,32 +10,45 @@ const backgrounds = [
 ]
 
 function getTodayDateKey() {
-    const now = new Date();
-    return now.toISOString().split('T')[0];
+  const now = new Date();
+  return now.toISOString().split('T')[0]; // YYYY-MM-DD
+}
+
+// Optional fallback quotes (if API fails)
+const backupQuotes = [
+  "“Don’t count the days, make the days count.” – Muhammad Ali",
+  "“You don’t need motivation. You need discipline.” – Unknown",
+  "“Stay focused and never give up.” – Unknown",
+  "“Dream big. Start small. Act now.” – Robin Sharma"
+];
+
+function getRandomBackupQuote() {
+  const i = Math.floor(Math.random() * backupQuotes.length);
+  return backupQuotes[i];
+}
+
+async function fetchQuoteOfTheDay() {
+  const stored = JSON.parse(localStorage.getItem('dailyQuote')) || {};
+  const today = getTodayDateKey();
+
+  if (stored.date === today) {
+    return stored.quote;
   }
-  
-  async function fetchQuoteOfTheDay() {
-    const stored = JSON.parse(localStorage.getItem('dailyQuote')) || {};
-    const today = getTodayDateKey();
-  
-    if (stored.date === today) {
-      return stored.quote;
-    }
-  
-    try {
-      const res = await fetch("https://api.quotable.io/random?tags=motivational");
-      const data = await res.json();
-      const quote = `“${data.content}” – ${data.author}`;
-  
-      // Save to localStorage
-      localStorage.setItem("dailyQuote", JSON.stringify({ date: today, quote }));
-  
-      return quote;
-    } catch (err) {
-      console.error("Error fetching quote:", err);
-      return "“Stay focused and never give up.” – Unknown";
-    }
+
+  try {
+    const res = await fetch("https://zenquotes.io/api/random");
+    const data = await res.json();
+    const quote = `“${data[0].q}” – ${data[0].a}`;
+
+    // Save quote to localStorage
+    localStorage.setItem("dailyQuote", JSON.stringify({ date: today, quote }));
+    return quote;
+  } catch (err) {
+    console.error("Error fetching quote:", err);
+    return getRandomBackupQuote(); // Fallback quote
   }
+}
+
 
 function checkMorningOrAfternoon() {
     const now = new Date();
@@ -285,7 +298,7 @@ setInterval(updateTime, 1000);
 updateTime();
 checkMorningOrAfternoon();
 fetchQuoteOfTheDay().then(quote => {
-    document.querySelector('.quote').textContent = quote;
+  document.querySelector('.quote').textContent = quote;
 });
 
 
